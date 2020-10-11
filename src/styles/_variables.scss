@@ -1,0 +1,31 @@
+// Import Fonts from Google
+// -- Main Font
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@300;400;600;700;900&display=swap');
+// --  Data (Mono)
+
+// -- Body
+
+// Palette
+$primary: #77A7E6;
+$primary-hover: lighten($primary, 5%);
+
+//Media Queries
+$tablet: 768px;
+$phone: 480px;
+
+// Typography
+$body-font: 'Muli', sans-serif;
+$heading-font: 'Muli', sans-serif;
+$body-font-size: 28px;
+
+// General Colors
+$body-color: white;
+$heading-color: $primary;
+$link-color: $primary;
+$background-light: white;
+$background-dark: #141C27;
+
+// Layout
+$grid: 1200px;
+$base-padding: 50px;
+$base-margin: 15px;
