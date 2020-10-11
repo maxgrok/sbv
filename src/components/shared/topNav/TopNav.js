@@ -23,7 +23,7 @@ const TopNav = () => {
      <li>Home
        <ul>
          <li class="link">
-           <Link to="/" target="_blank">SBV | Studios</Link>
+           <Link to="/" target="_blank">Studio</Link>
            <ul>
              <li class="link">
                <Link to="/" target="_blank">Wave One</Link>
@@ -73,7 +73,7 @@ const TopNav = () => {
               <Link to="/our-story" onClick={toggleNav}>
             Home</Link>
             <ul>
-              <li><Link to="https://sbv.studio/">SBV | Studio</Link></li>
+              <li><Link to="https://sbv.studio/">Studio</Link></li>
               <ul>
               <li><Link to="https://sbv.studio/#wave-one" target="_blank">Wave One</Link></li>
               <li><Link to="https://sbv.studio/#community-tokens" target="_blank">Community Tokens</Link></li>
