@@ -20,7 +20,7 @@ const TopNav = () => {
       <div className="menu left" style={{marginRight: `850px`}}> 
       <ul>
      <li className="link"><a href="https://www.sbv.studio/">Studio</a>
-       <ul>
+       <ul style={{listStyleType: `none`}}>
           <li className="link">
             <a href="https://www.sbv.studio/#wave-one" target="_blank">Wave One</a>
           </li>
@@ -41,7 +41,6 @@ const TopNav = () => {
        <ul>
          <li class="link"><a href="/our-story" target="_blank">Our Story</a></li>
          <li class="link"><a href="/team" target="_blank">Team</a></li>
-         <li class="link"><a href="" target="_blank">Blog</a></li>
        </ul>
      </li>
     </ul>
@@ -59,26 +58,21 @@ const TopNav = () => {
             <li style={{listStyle:`none`}}>
               <a href="/" onClick={toggleNav}>
             Home</a></li>
-              <li><a href="https://sbv.studio/">Studio</a></li>
-              <li><a href="https://sbv.studio/#wave-one" target="_blank">Wave One</a></li>
-              <li><a href="https://sbv.studio/#community-tokens" target="_blank">Community Tokens</a></li>
-              <li><a href="https://sbv.studio/#work-with-us" target="_blank">Work with Us</a></li>
-              
-          </ul> 
-          <br/>{/* make into dropdown with "Studio" --> "Wave One", "Community Tokens", "Work with Us" options*/}
-          <ul>
+            <ul>              
+              <li><a href="https://sbv.studio/" onClick={toggleNav}>Studio</a></li>
+              <li><a href="https://sbv.studio/#wave-one" target="_blank" onClick={toggleNav}>Wave One</a></li>
+              <li><a href="https://sbv.studio/#community-tokens" target="_blank" onClick={toggleNav}>Community Tokens</a></li>
+              <li><a href="https://sbv.studio/#work-with-us" target="_blank" onClick={toggleNav}>Work with Us</a></li>
+              </ul>
             <li style={{listStyle:`none`}}>
               <a href="/our-story" onClick={toggleNav}>
             About</a>
             <ul>
               <li><a href="/our-story" onClick={toggleNav}>Our Story</a></li>
-              <ul>
               <li><a href="/our-story" onClick={toggleNav}>Our Team</a></li>
-              </ul>
-              <li><a href="#blog" onClick={toggleNav}>Blog</a></li>
             </ul>
             </li>
-          </ul> {/* Make into dropdown with "Our Story" (links href Our Story page), "Team", "Blog" options */}
+          </ul>
         </div>
       </div>
       {/* End Hamburger */}
