@@ -1,12 +1,7 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 import Layout from '../components/layout/layout'
 import SocialLinks from '../components/shared/social/SocialLinks'
-
-import IconSBV1 from '../images/sbv__icon1.svg'
-import IconSBV2 from '../images/sbv__icon2.svg'
-import IconSBV3 from '../images/sbv__icon3.svg'
 
 const IndexPage = () => (
   <Layout>
@@ -30,4 +25,4 @@ const IndexPage = () => (
   </Layout>
 )
 
-export default IndexPage
+export default IndexPage;

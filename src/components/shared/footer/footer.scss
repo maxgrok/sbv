@@ -21,7 +21,7 @@
     }
     .Nav {
       display: flex;
-      padding: 75px;
+      padding: 25px;
       align-items: center;
       white-space: nowrap;
       font-size: .7em;
@@ -63,7 +63,6 @@
     margin-left: auto;
     @media (max-width: 977px) {
       margin: 0 auto;
-      padding-top: 50px;
     }
     @media (max-width: $phone) {
       margin-left: 0;

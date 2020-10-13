@@ -6,7 +6,7 @@
 .TopNav {
   display: flex;
   align-items: center;
-  position: relative;
+  position: relative  ;
   padding: 15px 50px;
   width: calc(100% - 100px);
   background-color: $primary;
@@ -17,7 +17,7 @@
   &__Desktop {
     margin-left: auto;
     display: none;
-    white-space: nowrap;
+    white-space: wrap;
     @media (min-width: $tablet) {
       display: flex;
       align-items: center;
@@ -30,17 +30,17 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      position: relative;
+      position: absolute;
       height: auto;
-      margin-left: 50px;
+      // margin-left: 50px;
       color: $primary;
+      color: white;
       text-decoration: none;
       font-size: .7em;
       @media (max-width: 1168px) {
         font-size: .6em;
         margin-left: 30px;
       }
-      color: white;
       &:after {
         content: '';
         background-color: transparent;
@@ -113,43 +113,41 @@
   // define the height of the menu
   --menu-height: 40px;
   // holder and ul general style
-  // box-sizing: border-box;
-  position: fixed;
+  position: absolute;
   top: 4vw;
+  margin:0 auto;
+  white-space: wrap;
   ul {
     list-style: none;
-    padding: 16px;
-    margin: 0;
     li, li a {
-      opacity: .8;
       color: #ffffff;      
       cursor: pointer;
-      transition: 200ms;
+      transition: 700ms;
       text-decoration: none;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 29px;
       white-space: nowrap;
-      font-weight: 700;
-      &:hover {
-        opacity: 1;
-      }
-      a {
-        display: flex;
-        align-items: center;
-        height: 100%;
-        width: 100%;      
-      }      
+      position: relative;
+      text-decoration: none;
+      transition: 0.5s;
+      padding-left: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: auto;
+      margin-left: 50px;
     }
     // lets put an arrow down 
     // to the li`s with dropdown
     li {
-      padding-right: 36px;
+      // padding-right: 36px;
       &::before {
         content: '';
         width: 0; 
         height: 0; 
-        border-left: 5px solid transparent;
-        border-right: 5px solid transparent;
-        border-top: 5px solid #40b1f0;
         position: absolute;
+        // padding-bottom: 5px;
         right: 8px;
         top: 50%;
         transform: translateY(-50%);
@@ -169,20 +167,18 @@
   > ul {
     display: flex;
     height: var(--menu-height);
-    align-items: center;
+    align-items: left;
     background-color: #28384d;
     // the first ul elements can be a
     // link or an li with a nested ul. 
     // the nested ul will be a dropdown
     li {
       position: relative;
-      margin: 0 8px;
+      // margin: 0 8px;
       // the dropdown style
       ul {
-        visibility: hidden;
-        opacity: 0;        
+        visibility: hidden;  
         padding: 0;
-        min-width: 160px;
         background-color: #28384d;
         position: absolute;
         top: calc(var(--menu-height) + 5px);
@@ -192,32 +188,59 @@
         transition-delay: 200ms;
         // the dropdown items style
         li {
+          list-style: none;
           margin: 0;
           padding: 3px 3px;
           display: flex;
           align-items: left;
           justify-content: flex-start;
           height: 30px;
-          padding-right: 40px;
+          // padding-right: 40px;
           // lets put an arrow right
           // to the inner li`s with
           // dropdowns
+          @media (max-width: 1168px) {
+            font-size: .6em;
+          }
           &::before {
             width: 0; 
             height: 0; 
-            border-top: 5px solid transparent;
-            border-bottom: 5px solid transparent;
-            border-left: 5px solid #77a7e6;
+            border-top: 2px solid transparent;
+            border-bottom: 2px solid transparent;
           }
           // every dropdown after the
           // first must open to the right
-          ul {
-            top: -3%;
-            left: 100%;
-            transform: translate(0)
+          // ul {
+          //   top: -3%;
+          //   left: 100%;
+          //   transform: translate(0)
+          // }
+          &:after {
+            content: '';
+            background-color: transparent;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transition: all 0.15s linear;
+            height: 3px;
+            top: 100%;
+            left: 0;
+            background: #28384d;
+            transition: transform 0.5s;
+            transform: scaleX(0);
+            transform-origin: right;
           }
-          &:hover {
-            background-color: #77a7e6;
+          &:hover:after {
+            content: '';
+            background-color: $primary;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transition: all 0.15s linear;
+            transform: scaleX(1);
+            transform-origin: left;
           }
         }
       }
@@ -234,46 +257,14 @@
   }
 }
 
-.menu.right {
-  margin-right: 15vw;
+.menu.left{
+  margin-left: 10vw;
+  height: 50%;
 }
-// // Dropdown button
-// .dropbtn {
-//   color: white;
-//   padding: 10px;
-//   font-size: 12px;
-//   border: none;
-//   cursor: pointer;
-//   margin: 0 auto;
-// }
-
-// .dropdown {
-//   position: relative;
-//   display: inline-block;
-// }
-
-// .dropdown-content {
-//   display: none;
-//   position: absolute;
-//   left: 0;
-//   background-color: #f9f9f9;
-//   min-width: 100px;
-//   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-//   z-index: 1;
-// }
-
-// .dropdown-content a {
-//   color: black;
-//   padding: 12px 16px;
-//   text-decoration: none;
-//   display: block;
-//   margin-left: 0px;
-// }
-
-// .dropdown-content a:hover {background-color: #f1f1f1;}
-// .dropdown:hover .dropdown-content {display: block;}
-// .dropdown:hover .dropbtn {}
-
+.menu.right {
+  margin-right: 20vw;
+  height: 50%;
+}
 
 // Old -- Refactoring
 .navbar__hamburger {
