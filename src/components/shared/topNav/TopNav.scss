@@ -111,11 +111,11 @@
 
 .menu {
   // define the height of the menu
-  --menu-height: 40px;
+  --menu-height: 7.5vh;
   // holder and ul general style
   position: absolute;
-  top: 4vw;
-  margin:0 auto;
+  // top: 4vw;
+  margin: 0 auto;
   white-space: wrap;
   ul {
     list-style: none;
@@ -259,11 +259,11 @@
 
 .menu.left{
   margin-left: 10vw;
-  height: 50%;
+  height: 40%;
 }
 .menu.right {
   margin-right: 20vw;
-  height: 50%;
+  height: 40%;
 }
 
 // Old -- Refactoring

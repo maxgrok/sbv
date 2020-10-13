@@ -19,7 +19,7 @@ const OurStoryPage = () => (
             <p>Isaac and Erich, lifelong best friends, partnered up for one of SBV's earliest projects. MediaMath, a company Erich co-Founded, hired SBV to analyze its strategic opportunities to leverage a decentralized tech stack for digital marketing. Jonah, a technologist recruited to MediaMath, caught wind of this work, volunteered his way onto the team and quickly became an invaluable contributor and cherished friend.</p>
             <p>SBV's work with MediaMath concluded in July of 2019, and Erich and Jonah left the company at the end of that year. This year the three became equal partners in Senary Blockchain Ventures. Together they explore blockchain opportunities as technologists, as entrepreneurs, and as investors.</p>
             </div>
-          <div className="Team">
+          <div className="Team" id="team">
             <h1>Team</h1>
             {/* First Teammate */}
             <div className="Grid">

@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'SBV | Studio',
+    title: 'SBV',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

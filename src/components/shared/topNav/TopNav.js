@@ -39,8 +39,8 @@ const TopNav = () => {
     <ul>
      <li className="link">About
        <ul>
-         <li class="link"><a href="/our-story" target="_blank">Our Story</a></li>
-         <li class="link"><a href="/team" target="_blank">Team</a></li>
+         <li class="link"><a href="/our-story">Our Story</a></li>
+         <li class="link"><a href="/our-story#team">Team</a></li>
        </ul>
      </li>
     </ul>
