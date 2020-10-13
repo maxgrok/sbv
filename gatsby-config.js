@@ -7,7 +7,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'SBV | Studio',
+        name: 'SBV',
         short_name: 'SBV',
         start_url: '/',
         background_color: '#000',
